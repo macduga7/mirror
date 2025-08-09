@@ -1,0 +1,7 @@
+Generate reusable components for Mirror:
+- LookCard(image, title, tags[])
+- StepperWithTimers(steps[] {label, tip, timerSec})
+- ClosetItemCard(type, color, image)
+- SuggestionCard(title, reason, ctaLabel)
+
+Keep props simple and make layout responsive.
