@@ -1,0 +1,14 @@
+You are designing screens for a style/beauty app called Mirror. Create a clean, modern Flutter page with Tailwind‑style spacing equivalents and logical sections.
+
+Pages to generate (run one at a time):
+1) Home (tabs: Chat, Closet, Lookbook)
+2) Style Chat (text input, image picker, chat bubble list, “Apply to…” action chips)
+3) Closet (grid of items, add button, filters by type/color)
+4) Outfit Picker (inputs: occasion, weather, colors; output list of 3–5 cards)
+5) Makeup Coach (select a goal; render stepper with timers)
+6) Hair Helper (face shape selector; render 3 suggestion cards with “See steps”)
+7) Lookbook (saved looks; share/download)
+
+Design notes:
+- Simple neutral palette, large tap targets, card‑based lists, and sticky bottom action bar where helpful.
+- Leave data bindings empty; I’ll wire to Firestore later.
