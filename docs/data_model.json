@@ -1,0 +1,65 @@
+{
+  "collections": {
+    "users": {
+      "fields": {
+        "displayName": "string",
+        "photoURL": "string",
+        "styleGoals": "array<string>",
+        "createdAt": "timestamp"
+      }
+    },
+    "closet_items": {
+      "fields": {
+        "userId": "ref(users)",
+        "type": "string",
+        "color": "string",
+        "pattern": "string",
+        "imageURL": "string",
+        "notes": "string",
+        "createdAt": "timestamp"
+      },
+      "indexes": [
+        "userId"
+      ]
+    },
+    "looks": {
+      "fields": {
+        "userId": "ref(users)",
+        "name": "string",
+        "items": "array<ref(closet_items)>",
+        "makeupPlan": "map",
+        "hairPlan": "map",
+        "images": "array<string>",
+        "createdAt": "timestamp"
+      },
+      "indexes": [
+        "userId"
+      ]
+    },
+    "conversations": {
+      "fields": {
+        "userId": "ref(users)",
+        "createdAt": "timestamp",
+        "lastMessageAt": "timestamp"
+      },
+      "indexes": [
+        "userId",
+        "lastMessageAt"
+      ]
+    },
+    "messages": {
+      "fields": {
+        "conversationId": "ref(conversations)",
+        "role": "string",
+        "text": "string",
+        "imageURLs": "array<string>",
+        "json": "map",
+        "createdAt": "timestamp"
+      },
+      "indexes": [
+        "conversationId",
+        "createdAt"
+      ]
+    }
+  }
+}
